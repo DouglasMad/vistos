@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Cliente</title>
+    <link rel="stylesheet" type="text/css" href="css/cliente.css">
+</head>
+<body>
+    <h1>Formulário de Cliente</h1>
+
+    <form id="formularioCliente">
+        <label for="clienteSelecionado">Selecionar Cliente:</label>
+        <select id="clienteSelecionado">
+            <!-- Opções de clientes serão carregadas aqui -->
+        </select><br><br>
+
+        <fieldset>
+            <legend>Checklist de Documentação</legend>
+            <label><input type="checkbox" id="declaracaoEstada"> Declaração de Estada Prevista</label><br>
+            <label><input type="checkbox" id="declaracaoResidencia"> Declaração de Residência para PB4</label><br>
+            <label><input type="checkbox" id="enderecoCompleto"> Endereço Completo da Devolução</label><br>
+            <label><input type="checkbox" id="fotos34"> 2 Fotografias 3/4</label><br>
+            <label><input type="checkbox" id="certificadoCriminal"> Certificado de Registro Criminal da Polícia Federal (apostilado)</label><br>
+            <label><input type="checkbox" id="comprovativoFinanceiro"> Comprovativo da Disponibilidade de Recursos Financeiros</label><br>
+            <label><input type="checkbox" id="interesseIEFP"> Manifestação de Interesse para Inscrição no IEFP</label><br>
+            <label><input type="checkbox" id="termoAnuencia"> Termo de Ciência e Anuência VFS</label><br>
+            <label><input type="checkbox" id="checklistVFS"> Checklist VFS</label><br>
+            <label><input type="checkbox" id="pb4Tempo"> Solicitação do PB4</label><br>
+            <label><input type="checkbox" id="registroCriminalPortugues"> Requerimento para Registro Criminal Português</label><br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Datas Importantes</legend>
+            <label for="dataEntrada">Data de Entrada:</label>
+            <input type="date" id="dataEntrada"><br>
+            <label for="dataVolta">Data de Volta:</label>
+            <input type="date" id="dataVolta"><br>
+            <label for="dataEnvioVFS">Data de Envio VFS:</label>
+            <input type="date" id="dataEnvioVFS"><br>
+            <label for="dataChegadaVFS">Data de Chegada VFS:</label>
+            <input type="date" id="dataChegadaVFS"><br>
+            <label for="dataEnvioConsulado">Data de Envio para o Consulado:</label>
+            <input type="date" id="dataEnvioConsulado"><br>
+        </fieldset><br>
+
+        <button type="submit">Salvar Formulário</button>
+    </form>
+
+    <script src="formularioCliente.js"></script>
+</body>
+</html>
