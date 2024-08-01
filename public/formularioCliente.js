@@ -53,3 +53,31 @@ document.getElementById('formularioCliente').addEventListener('submit', function
         alert('Erro ao salvar o formulário: ' + error.message);  // Mostra erro ao usuário
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const dataEntrada = document.getElementById('dataEntrada');
+    const dataVolta = document.getElementById('dataVolta');
+
+    dataEntrada.addEventListener('change', function() {
+        if (dataEntrada.value) {
+            const entrada = new Date(dataEntrada.value);
+            entrada.setDate(entrada.getDate() + 120); // Adiciona 120 dias à data de entrada
+            dataVolta.value = entrada.toISOString().split('T')[0]; // Formata a data para o formato aaaa-mm-dd
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const select = document.getElementById('clienteSelect');
+
+    fetch('/clientes')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(cliente => {
+                const option = document.createElement('option');
+                option.value = cliente.id;
+                option.textContent = cliente.nome;
+                select.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar clientes:', error));
+});

@@ -65,6 +65,18 @@ app.post('/salvarFormulario', (req, res) => {
     });
 });
 
+app.get('/clientes', (req, res) => {
+    const sql = 'SELECT id, nome FROM cliente';
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error('Erro ao buscar clientes:', err);
+            res.status(500).send('Erro ao buscar clientes');
+            return;
+        }
+        res.json(results);
+    });
+});
+
 // Inicializa o servidor
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');

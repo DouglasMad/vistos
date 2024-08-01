@@ -1,0 +1,68 @@
+/* Estilo geral do formulário */
+form {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Alinha labels e inputs verticalmente */
+label, input, button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Ajustes específicos para labels */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Ajustes para os campos de entrada */
+input[type="date"], input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo específico para checkboxes */
+input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+/* Alinhamento dos checkboxes com as labels */
+input[type="checkbox"] + label {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+/* Estilo para botões */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Container para legendas e datas */
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
